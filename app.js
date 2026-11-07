@@ -1,5 +1,5 @@
-'use strict';
-/* PERIV · JavaScript puro, sin dependencias ni llamadas externas */
+﻿'use strict';
+/* PERIV Â· JavaScript puro, sin dependencias ni llamadas externas */
 
 const DOC_VERSION = '1.0 (2026-11-06)';
 const K = {
@@ -7,8 +7,8 @@ const K = {
   budget: 'periv_budget', log: 'periv_consent_log', cookie: 'periv_cookie_notice'
 };
 const CATS = {
-  'Vivienda': '#7c5cff', 'Alimentación': '#3ddc97', 'Transporte': '#00b8ff', 'Servicios': '#ffc857',
-  'Salud': '#ff5d73', 'Ocio': '#ff4fd8', 'Educación': '#ff8a3d', 'Otros': '#9aa0c8'
+  'Vivienda': '#7c5cff', 'AlimentaciÃ³n': '#3ddc97', 'Transporte': '#00b8ff', 'Servicios': '#ffc857',
+  'Salud': '#ff5d73', 'Ocio': '#ff4fd8', 'EducaciÃ³n': '#ff8a3d', 'Otros': '#9aa0c8'
 };
 const MAIL = 'perivdor5@gmail.com';
 
@@ -20,7 +20,7 @@ const cop = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP',
 const load = (k, d) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } };
 const save = (k, v) => {
   try { localStorage.setItem(k, JSON.stringify(v)); return true; }
-  catch { toast('No se pudo guardar en este navegador (¿modo privado o sin espacio?).'); return false; }
+  catch { toast('No se pudo guardar en este navegador (Â¿modo privado o sin espacio?).'); return false; }
 };
 const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
 const pad = n => String(n).padStart(2, '0');
@@ -58,7 +58,7 @@ document.addEventListener('click', e => {
 $$('dialog').forEach(d => d.addEventListener('click', e => { if (e.target === d) d.close(); }));
 
 /* ---------- documentos legales ---------- */
-const LEGAL_TITLES = { terms: 'Términos y condiciones', privacy: 'Política de privacidad', cookies: 'Política de cookies', refund: 'Política de reembolso' };
+const LEGAL_TITLES = { terms: 'TÃ©rminos y condiciones', privacy: 'PolÃ­tica de privacidad', cookies: 'PolÃ­tica de cookies', refund: 'PolÃ­tica de reembolso' };
 function showLegal(id) {
   const tpl = $('#tpl-' + id);
   if (!tpl) return;
@@ -88,7 +88,7 @@ async function recordConsent(formId, form, checks, extra = {}) {
     zona_horaria_navegador: Intl.DateTimeFormat().resolvedOptions().timeZone,
     formulario: formId,
     casillas: Object.fromEntries(checks.map(c => [c.id, c.checked])),
-    metodo: 'Casillas separadas, no premarcadas, marcadas manualmente por la persona y envío del formulario',
+    metodo: 'Casillas separadas, no premarcadas, marcadas manualmente por la persona y envÃ­o del formulario',
     version_documentos: DOC_VERSION,
     huella_sha256_textos: await sha256(docs + '\n' + labels),
     idioma: navigator.language,
@@ -105,13 +105,13 @@ function renderConsents() {
   const log = load(K.log, []).slice().reverse();
   const ul = $('#cs-list');
   ul.replaceChildren();
-  if (!log.length) { ul.append(el('li', { class: 'empty', text: 'Aún no hay aceptaciones registradas.' })); return; }
+  if (!log.length) { ul.append(el('li', { class: 'empty', text: 'AÃºn no hay aceptaciones registradas.' })); return; }
   log.forEach(e => {
     ul.append(el('li', {},
       el('div', { class: 'meta' },
-        el('b', { text: `${e.formulario} · ${e.hora_local}` }),
-        el('small', { text: `Casillas: ${Object.entries(e.casillas).map(([k, v]) => k + '=' + (v ? 'sí' : 'no')).join(', ')} · v${e.version_documentos}` }),
-        el('small', { text: `ID ${e.id} · huella ${e.huella_sha256_textos.slice(0, 16)}…` }))));
+        el('b', { text: `${e.formulario} Â· ${e.hora_local}` }),
+        el('small', { text: `Casillas: ${Object.entries(e.casillas).map(([k, v]) => k + '=' + (v ? 'sÃ­' : 'no')).join(', ')} Â· v${e.version_documentos}` }),
+        el('small', { text: `ID ${e.id} Â· huella ${e.huella_sha256_textos.slice(0, 16)}â€¦` }))));
   });
 }
 $('#btn-consents').addEventListener('click', () => { renderConsents(); openDlg($('#dlg-consents')); });
@@ -120,7 +120,7 @@ $('#cs-download').addEventListener('click', () => {
   download('periv-registro-aceptaciones.json', JSON.stringify(load(K.log, []), null, 2), 'application/json');
 });
 $('#cs-clear').addEventListener('click', () => {
-  if (confirm('¿Borrar tu registro de aceptaciones? Perderás la prueba de cuándo y cómo aceptaste.')) {
+  if (confirm('Â¿Borrar tu registro de aceptaciones? PerderÃ¡s la prueba de cuÃ¡ndo y cÃ³mo aceptaste.')) {
     localStorage.removeItem(K.log); renderConsents(); toast('Registro borrado.');
   }
 });
@@ -148,14 +148,14 @@ $('#form-onboard').addEventListener('submit', async e => {
   save(K.profile, profile);
   $('#dlg-onboard').close();
   refreshGate();
-  toast(`¡Bienvenido/a, ${alias}! Tu aceptación quedó registrada.`);
+  toast(`Â¡Bienvenido/a, ${alias}! Tu aceptaciÃ³n quedÃ³ registrada.`);
   $('#panel').scrollIntoView({ behavior: 'smooth' });
 });
 function refreshGate() {
   const on = !!profile;
   $('#lock').classList.toggle('hide', on);
   $('#panel-app').setAttribute('aria-hidden', on ? 'false' : 'true');
-  $('#hello-name').textContent = on ? profile.alias : '—';
+  $('#hello-name').textContent = on ? profile.alias : 'â€”';
   if (on) renderAll();
 }
 
@@ -184,9 +184,9 @@ function renderExpenses() {
   const list = monthExpenses().sort((a, b) => b.date.localeCompare(a.date));
   if (!list.length) ul.append(el('li', { class: 'empty', text: 'Sin gastos este mes.' }));
   list.forEach(x => ul.append(el('li', {},
-    el('div', { class: 'meta' }, el('b', { text: x.desc }), el('small', { text: `${x.cat} · ${x.date}` })),
+    el('div', { class: 'meta' }, el('b', { text: x.desc }), el('small', { text: `${x.cat} Â· ${x.date}` })),
     el('span', { class: 'amt', text: cop.format(x.amount) }),
-    el('div', { class: 'acts' }, el('button', { class: 'icon-btn', 'aria-label': 'Eliminar gasto', text: '🗑', onclick: () => {
+    el('div', { class: 'acts' }, el('button', { class: 'icon-btn', 'aria-label': 'Eliminar gasto', text: 'ðŸ—‘', onclick: () => {
       expenses = expenses.filter(y => y.id !== x.id); save(K.exp, expenses); renderAll();
     } })))));
 }
@@ -195,12 +195,12 @@ function renderStats() {
   const b = Number(budgets[monthInp.value]) || 0;
   $('#st-total').textContent = cop.format(total);
   $('#budget').value = b || '';
-  $('#st-left').textContent = b ? cop.format(b - total) : '—';
+  $('#st-left').textContent = b ? cop.format(b - total) : 'â€”';
   const pct = b ? Math.min(100, Math.round(total / b * 100)) : 0;
   const ring = $('#ring');
   ring.style.setProperty('--p', pct);
   ring.style.setProperty('--ringc', pct >= 100 ? 'var(--bad)' : pct >= 80 ? 'var(--warn)' : 'var(--p2)');
-  $('#ring-pct').textContent = b ? pct + '%' : '—';
+  $('#ring-pct').textContent = b ? pct + '%' : 'â€”';
   $('#st-left').style.color = b && total > b ? 'var(--bad)' : '';
 }
 $('#budget').addEventListener('change', e => {
@@ -212,7 +212,7 @@ function renderChart() {
   const tot = {};
   monthExpenses().forEach(x => tot[x.cat] = (tot[x.cat] || 0) + x.amount);
   const entries = Object.entries(tot).sort((a, b) => b[1] - a[1]);
-  if (!entries.length) { box.append(el('span', { class: 'none', text: 'Añade gastos para ver el gráfico 3D' })); return; }
+  if (!entries.length) { box.append(el('span', { class: 'none', text: 'AÃ±ade gastos para ver el grÃ¡fico 3D' })); return; }
   const max = entries[0][1];
   entries.forEach(([cat, v]) => {
     const bar = el('div', { class: 'bar3d', style: `--c:${CATS[cat]};--h:4px` },
@@ -252,14 +252,14 @@ function renderReminders() {
     const li = el('li', { class: (r.done ? 'done ' : '') + (due ? 'overdue' : '') },
       el('div', { class: 'meta' },
         el('b', { text: r.title }),
-        el('small', { text: `${new Date(r.when).toLocaleString('es-CO', { dateStyle: 'medium', timeStyle: 'short' })}${r.repeat === 'monthly' ? ' · cada mes' : ''}${r.amount ? ' · ' + cop.format(r.amount) : ''}` })),
+        el('small', { text: `${new Date(r.when).toLocaleString('es-CO', { dateStyle: 'medium', timeStyle: 'short' })}${r.repeat === 'monthly' ? ' Â· cada mes' : ''}${r.amount ? ' Â· ' + cop.format(r.amount) : ''}` })),
       el('div', { class: 'acts' },
-        el('button', { class: 'icon-btn', 'aria-label': 'Marcar como hecho', text: '✓', onclick: () => {
+        el('button', { class: 'icon-btn', 'aria-label': 'Marcar como hecho', text: 'âœ“', onclick: () => {
           if (r.repeat === 'monthly') { r.when = addMonth(r.when); r.notified = false; toast(`Siguiente aviso: ${new Date(r.when).toLocaleDateString('es-CO')}`); }
           else r.done = true;
           save(K.rem, reminders); renderReminders();
         } }),
-        el('button', { class: 'icon-btn', 'aria-label': 'Eliminar recordatorio', text: '🗑', onclick: () => {
+        el('button', { class: 'icon-btn', 'aria-label': 'Eliminar recordatorio', text: 'ðŸ—‘', onclick: () => {
           reminders = reminders.filter(y => y.id !== r.id); save(K.rem, reminders); renderReminders();
         } })));
     ul.append(li);
@@ -271,7 +271,7 @@ function checkReminders() {
   reminders.forEach(r => {
     if (!r.done && !r.notified && new Date(r.when) <= now) {
       r.notified = true; changed = true;
-      const msg = `⏰ ${r.title}${r.amount ? ' · ' + cop.format(r.amount) : ''}`;
+      const msg = `â° ${r.title}${r.amount ? ' Â· ' + cop.format(r.amount) : ''}`;
       toast(msg);
       if ('Notification' in window && Notification.permission === 'granted') {
         try { new Notification('PERIV', { body: msg }); } catch { /* ignorar */ }
@@ -282,19 +282,19 @@ function checkReminders() {
 }
 setInterval(checkReminders, 30000);
 $('#btn-notif').addEventListener('click', async () => {
-  if (!('Notification' in window)) { toast('Tu navegador no admite notificaciones; verás los avisos dentro de la página.'); return; }
+  if (!('Notification' in window)) { toast('Tu navegador no admite notificaciones; verÃ¡s los avisos dentro de la pÃ¡gina.'); return; }
   const p = await Notification.requestPermission();
-  toast(p === 'granted' ? 'Avisos del navegador activados.' : 'No activaste los avisos; seguirás viéndolos dentro de la página.');
+  toast(p === 'granted' ? 'Avisos del navegador activados.' : 'No activaste los avisos; seguirÃ¡s viÃ©ndolos dentro de la pÃ¡gina.');
 });
 
 /* ---------- exportar y borrar ---------- */
 $('#btn-csv').addEventListener('click', () => {
   const q = v => '"' + String(v).replace(/"/g, '""').replace(/^([=+\-@])/, "'$1") + '"';
-  const rows = [['Fecha', 'Descripción', 'Categoría', 'Valor COP'], ...expenses.map(x => [x.date, x.desc, x.cat, x.amount])];
+  const rows = [['Fecha', 'DescripciÃ³n', 'CategorÃ­a', 'Valor COP'], ...expenses.map(x => [x.date, x.desc, x.cat, x.amount])];
   download('periv-gastos.csv', '\ufeff' + rows.map(r => r.map(q).join(',')).join('\n'), 'text/csv');
 });
 $('#btn-wipe').addEventListener('click', () => {
-  if (!confirm('Se borrarán tu perfil, gastos, recordatorios y presupuestos de este dispositivo. Tu registro de aceptaciones se conserva. ¿Continuar?')) return;
+  if (!confirm('Se borrarÃ¡n tu perfil, gastos, recordatorios y presupuestos de este dispositivo. Tu registro de aceptaciones se conserva. Â¿Continuar?')) return;
   [K.profile, K.exp, K.rem, K.budget].forEach(k => localStorage.removeItem(k));
   profile = null; expenses = []; reminders = []; budgets = {};
   refreshGate(); toast('Tus datos fueron eliminados.');
@@ -309,9 +309,9 @@ $('#form-contact').addEventListener('submit', async e => {
   if (!t.checked || !p.checked) { toast('Marca las dos casillas para enviar.'); return; }
   const rec = await recordConsent('Contacto', e.target, [t, p]);
   const name = $('#c-name').value.trim(), mail = $('#c-mail').value.trim(), msg = $('#c-msg').value.trim();
-  const body = `${msg}\n\n— ${name} (${mail})\nRef. de aceptación: ${rec.id}`;
+  const body = `${msg}\n\nâ€” ${name} (${mail})\nRef. de aceptaciÃ³n: ${rec.id}`;
   const url = `mailto:${MAIL}?subject=${encodeURIComponent('Contacto PERIV - ' + name)}&body=${encodeURIComponent(body)}`;
-  $('#contact-result').textContent = 'Se abrió tu aplicación de correo con el mensaje listo. Si no se abrió, escríbenos a ' + MAIL + ' o por WhatsApp al 321 700 3340. Tu aceptación quedó registrada.';
+  $('#contact-result').textContent = 'Se abriÃ³ tu aplicaciÃ³n de correo con el mensaje listo. Si no se abriÃ³, escrÃ­benos a ' + MAIL + ' o por WhatsApp al 321 700 3340. Tu aceptaciÃ³n quedÃ³ registrada.';
   location.href = url;
   e.target.reset();
 });
@@ -348,5 +348,4 @@ const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecti
 $$('.reveal').forEach(n => io.observe(n));
 
 /* ---------- inicio ---------- */
-refreshGate();
-checkReminders();
+refreshGate();checkReminders();

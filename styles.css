@@ -1,4 +1,4 @@
-:root{
+﻿:root{
   --bg:#07061a;--bg2:#0e0c2b;--panel:rgba(255,255,255,.06);--line:rgba(255,255,255,.14);
   --text:#ecebff;--muted:#a9a6d6;--p1:#7c5cff;--p2:#00e5ff;--p3:#ff4fd8;--ok:#3ddc97;--bad:#ff5d73;--warn:#ffc857;
   --r:18px;
@@ -135,7 +135,7 @@ select option{background:#14123a}
 .note{color:var(--muted);font-size:.85rem;margin-top:12px}
 .tiny{color:var(--muted);font-size:.78rem}
 
-/* ---------- gráfico de barras 3D ---------- */
+/* ---------- grÃ¡fico de barras 3D ---------- */
 .chart3d{display:flex;align-items:flex-end;justify-content:space-around;gap:10px;height:230px;padding:10px 6px 0;perspective:700px;
   border-bottom:2px solid var(--line);background:linear-gradient(transparent 49px,rgba(255,255,255,.06) 50px) 0 0/100% 50px}
 .chart3d .none{align-self:center;color:var(--muted)}
@@ -158,7 +158,7 @@ select option{background:#14123a}
 .contact p{margin-bottom:8px}
 .row-end{display:flex;justify-content:flex-end;gap:10px;margin-top:12px;flex-wrap:wrap}
 
-/* ---------- diálogos ---------- */
+/* ---------- diÃ¡logos ---------- */
 dialog{margin:auto;border:1px solid var(--line);border-radius:22px;background:#12102f;color:var(--text);padding:24px;width:min(480px,92vw);max-height:88vh;overflow:auto;
   box-shadow:0 40px 90px rgba(0,0,0,.7)}
 dialog.wide{width:min(760px,94vw)}
@@ -196,5 +196,4 @@ code{background:rgba(255,255,255,.1);padding:1px 6px;border-radius:6px;font-size
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .reveal{opacity:1;transform:none}
-}
+  .reveal{opacity:1;transform:none}}
