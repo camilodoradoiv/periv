@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es-CO">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PERIV Â· Tus gastos y recordatorios en 3D</title>
+<title>PERIV · Tus gastos y recordatorios</title>
 <meta name="description" content="PERIV te ayuda a llevar el control de tus gastos mensuales y tus recordatorios de pago. Tus datos se quedan en tu dispositivo.">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -25,9 +25,9 @@
 <section class="hero" id="inicio">
   <div class="floor" aria-hidden="true"></div>
   <div class="hero-text">
-    <p class="eyebrow">Finanzas personales Â· Colombia</p>
-    <h1>Domina tus gastos.<br><span class="grad">No olvides ningÃºn pago.</span></h1>
-    <p class="lead">PERIV registra tus gastos mensuales, te muestra en quÃ© se va tu dinero en grÃ¡ficos 3D y te recuerda cada fecha importante. Sin cuentas, sin servidores: tus datos se quedan en tu dispositivo.</p>
+    <p class="eyebrow">Finanzas personales · Colombia</p>
+    <h1>Domina tus gastos.<br><span class="grad">No lo olvides.</span></h1>
+    <p class="lead">PERIV registra tus gastos mensuales, te muestra en qué se va tu dinero en gráficos 3D y te recuerda cada fecha importante. Sin cuentas, sin servidores: tus datos se quedan en tu dispositivo.</p>
     <div class="cta">
       <button class="btn primary" id="btn-start">Empezar gratis</button>
       <a class="btn ghost" href="#funciones">Ver funciones</a>
@@ -52,12 +52,12 @@
 <section class="section" id="funciones">
   <h2 class="reveal">Todo lo que necesitas, nada que sobre</h2>
   <div class="grid3">
-    <article class="card reveal" data-tilt><div class="icon">ðŸ’¸</div><h3>Gastos del mes</h3><p>Anota cada gasto con su categorÃ­a y mira el total mensual al instante.</p></article>
-    <article class="card reveal" data-tilt><div class="icon">â°</div><h3>Recordatorios</h3><p>Programa pagos Ãºnicos o mensuales. PERIV te avisa cuando llegue la hora.</p></article>
-    <article class="card reveal" data-tilt><div class="icon">ðŸ“Š</div><h3>Barras en 3D</h3><p>Visualiza quÃ© categorÃ­a consume mÃ¡s de tu presupuesto.</p></article>
-    <article class="card reveal" data-tilt><div class="icon">ðŸ”’</div><h3>Privacidad real</h3><p>Sin cookies de terceros, sin analÃ­tica, sin anuncios. Solo pedimos lo mÃ­nimo.</p></article>
-    <article class="card reveal" data-tilt><div class="icon">ðŸ“¥</div><h3>Exporta a CSV</h3><p>Descarga tus gastos y Ã¡brelos en Excel o Google Sheets.</p></article>
-    <article class="card reveal" data-tilt><div class="icon">ðŸ—‘ï¸</div><h3>TÃº mandas</h3><p>Borra todos tus datos cuando quieras, con un solo clic.</p></article>
+    <article class="card reveal" data-tilt><div class="icon">💸</div><h3>Gastos del mes</h3><p>Anota cada gasto con su categoría y mira el total mensual al instante.</p></article>
+    <article class="card reveal" data-tilt><div class="icon">⏰</div><h3>Recordatorios</h3><p>Programa pagos únicos o mensuales. PERIV te avisa cuando llegue la hora.</p></article>
+    <article class="card reveal" data-tilt><div class="icon">📊</div><h3>Barras en 3D</h3><p>Visualiza qué categoría consume más de tu presupuesto.</p></article>
+    <article class="card reveal" data-tilt><div class="icon">🔒</div><h3>Privacidad real</h3><p>Sin cookies de terceros, sin analítica, sin anuncios. Solo pedimos lo mínimo.</p></article>
+    <article class="card reveal" data-tilt><div class="icon">📥</div><h3>Exporta a CSV</h3><p>Descarga tus gastos y ábrelos en Excel o Google Sheets.</p></article>
+    <article class="card reveal" data-tilt><div class="icon">🗑️</div><h3>Tú mandas</h3><p>Borra todos tus datos cuando quieras, con un solo clic.</p></article>
   </div>
 </section>
 
@@ -67,9 +67,9 @@
   <div class="panel-wrap">
     <div class="lock" id="lock">
       <div class="lock-box">
-        <div class="icon big">ðŸ”</div>
+        <div class="icon big">🔐</div>
         <h3>Crea tu perfil para empezar</h3>
-        <p>Solo te pedimos un alias y tu aceptaciÃ³n de las condiciones. Es gratis.</p>
+        <p>Solo te pedimos un alias y tu aceptación de las condiciones. Es gratis.</p>
         <button class="btn primary" id="btn-unlock">Crear mi perfil</button>
       </div>
     </div>
@@ -77,15 +77,15 @@
     <div class="panel" id="panel-app" aria-hidden="true">
       <div class="panel-head">
         <div>
-          <p class="hello">Hola, <strong id="hello-name">â€”</strong> ðŸ‘‹</p>
+          <p class="hello">Hola, <strong id="hello-name">—</strong> 👋</p>
           <label class="inline">Mes
             <input type="month" id="month" aria-label="Mes a consultar">
           </label>
         </div>
         <div class="panel-actions">
-          <button class="btn small ghost" id="btn-notif">ðŸ”” Activar avisos</button>
-          <button class="btn small ghost" id="btn-csv">ðŸ“¥ CSV</button>
-          <button class="btn small ghost" id="btn-consents">ðŸ§¾ Mis aceptaciones</button>
+          <button class="btn small ghost" id="btn-notif">🔔 Activar avisos</button>
+          <button class="btn small ghost" id="btn-csv">📥 CSV</button>
+          <button class="btn small ghost" id="btn-consents">🧾 Mis aceptaciones</button>
           <button class="btn small danger" id="btn-wipe">Borrar mis datos</button>
         </div>
       </div>
@@ -96,7 +96,7 @@
           <span>Presupuesto del mes</span>
           <input type="number" id="budget" min="0" step="1000" inputmode="numeric" placeholder="Opcional" aria-label="Presupuesto mensual en pesos">
         </div>
-        <div class="stat" data-tilt><span>Disponible</span><strong id="st-left">â€”</strong></div>
+        <div class="stat" data-tilt><span>Disponible</span><strong id="st-left">—</strong></div>
         <div class="stat ring-stat" data-tilt>
           <div class="ring" id="ring"><b id="ring-pct">0%</b></div>
         </div>
@@ -107,27 +107,27 @@
         <div class="box">
           <h3>Gastos</h3>
           <form id="form-expense" class="mini-form" autocomplete="off">
-            <input type="text" id="e-desc" placeholder="Â¿En quÃ© gastaste?" maxlength="60" required aria-label="DescripciÃ³n del gasto">
+            <input type="text" id="e-desc" placeholder="¿En qué gastaste?" maxlength="60" required aria-label="Descripción del gasto">
             <input type="number" id="e-amount" placeholder="Valor (COP)" min="1" step="1" inputmode="numeric" required aria-label="Valor del gasto">
-            <select id="e-cat" aria-label="CategorÃ­a"></select>
+            <select id="e-cat" aria-label="Categoría"></select>
             <input type="date" id="e-date" required aria-label="Fecha del gasto">
-            <button class="btn primary small" type="submit">AÃ±adir</button>
+            <button class="btn primary small" type="submit">Añadir</button>
           </form>
           <ul class="list" id="list-expenses"></ul>
         </div>
 
-        <!-- GRÃFICO + RECORDATORIOS -->
+        <!-- GRÁFICO + RECORDATORIOS -->
         <div class="box">
-          <h3>Por categorÃ­a</h3>
+          <h3>Por categoría</h3>
           <div class="chart3d" id="chart3d" aria-live="polite"></div>
 
           <h3 class="mt">Recordatorios</h3>
           <form id="form-reminder" class="mini-form" autocomplete="off">
-            <input type="text" id="r-title" placeholder="Ej: Pagar arriendo" maxlength="60" required aria-label="TÃ­tulo del recordatorio">
+            <input type="text" id="r-title" placeholder="Ej: Pagar arriendo" maxlength="60" required aria-label="Título del recordatorio">
             <input type="number" id="r-amount" placeholder="Valor (opcional)" min="0" step="1" inputmode="numeric" aria-label="Valor del recordatorio">
             <input type="date" id="r-date" required aria-label="Fecha del recordatorio">
             <input type="time" id="r-time" value="09:00" required aria-label="Hora">
-            <select id="r-repeat" aria-label="RepeticiÃ³n">
+            <select id="r-repeat" aria-label="Repetición">
               <option value="none">Una sola vez</option>
               <option value="monthly">Cada mes</option>
             </select>
@@ -136,7 +136,7 @@
           <ul class="list" id="list-reminders"></ul>
         </div>
       </div>
-      <p class="note">ðŸ’¾ Todo lo que escribes aquÃ­ se guarda solo en este navegador. Si borras los datos del navegador o cambias de dispositivo, no se transfieren. Usa Â«CSVÂ» para respaldar. Los avisos funcionan mientras PERIV estÃ© abierto en una pestaÃ±a.</p>
+      <p class="note">💾 Todo lo que escribes aquí se guarda solo en este navegador. Si borras los datos del navegador o cambias de dispositivo, no se transfieren. Usa «CSV» para respaldar. Los avisos funcionan mientras PERIV esté abierto en una pestaña.</p>
     </div>
   </div>
 </section>
@@ -144,12 +144,12 @@
 <!-- ============ LEGAL ============ -->
 <section class="section" id="legal">
   <h2 class="reveal">Transparencia y legalidad</h2>
-  <p class="sub reveal">PERIV cumple con la normativa colombiana de protecciÃ³n de datos y de consumidor. Lee cada documento:</p>
+  <p class="sub reveal">PERIV cumple con la normativa colombiana de protección de datos y de consumidor. Lee cada documento:</p>
   <div class="grid4">
-    <button class="card legal-card reveal" data-tilt data-legal="terms"><div class="icon">ðŸ“œ</div><h3>TÃ©rminos y condiciones</h3></button>
-    <button class="card legal-card reveal" data-tilt data-legal="privacy"><div class="icon">ðŸ›¡ï¸</div><h3>PolÃ­tica de privacidad</h3></button>
-    <button class="card legal-card reveal" data-tilt data-legal="cookies"><div class="icon">ðŸª</div><h3>PolÃ­tica de cookies</h3></button>
-    <button class="card legal-card reveal" data-tilt data-legal="refund"><div class="icon">â†©ï¸</div><h3>PolÃ­tica de reembolso</h3></button>
+    <button class="card legal-card reveal" data-tilt data-legal="terms"><div class="icon">📜</div><h3>Términos y condiciones</h3></button>
+    <button class="card legal-card reveal" data-tilt data-legal="privacy"><div class="icon">🛡️</div><h3>Política de privacidad</h3></button>
+    <button class="card legal-card reveal" data-tilt data-legal="cookies"><div class="icon">🍪</div><h3>Política de cookies</h3></button>
+    <button class="card legal-card reveal" data-tilt data-legal="refund"><div class="icon">↩️</div><h3>Política de reembolso</h3></button>
   </div>
 </section>
 
@@ -159,21 +159,21 @@
   <div class="cols contact">
     <div class="box reveal">
       <h3>Hablemos</h3>
-      <p>ðŸ“§ <a href="mailto:perivdor5@gmail.com">perivdor5@gmail.com</a></p>
-      <p>ðŸ“± <a href="tel:+573217003340">321 700 3340</a></p>
-      <p>ðŸ’¬ <a href="https://wa.me/573217003340" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
-      <p class="note">TambiÃ©n puedes ejercer tus derechos de datos personales (conocer, actualizar, rectificar, suprimir) escribiendo a este correo.</p>
+      <p>📧 <a href="mailto:perivdor5@gmail.com">perivdor5@gmail.com</a></p>
+      <p>📱 <a href="tel:+573217003340">321 700 3340</a></p>
+      <p>💬 <a href="https://wa.me/573217003340" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+      <p class="note">También puedes ejercer tus derechos de datos personales (conocer, actualizar, rectificar, suprimir) escribiendo a este correo.</p>
     </div>
     <div class="box reveal">
-      <h3>EscrÃ­benos</h3>
+      <h3>Escríbenos</h3>
       <form id="form-contact" class="stack" autocomplete="off">
         <label>Nombre<input type="text" id="c-name" maxlength="80" required></label>
         <label>Correo para responderte<input type="email" id="c-mail" maxlength="120" required></label>
         <label>Mensaje<textarea id="c-msg" rows="4" maxlength="800" required></textarea></label>
         <label class="check"><input type="checkbox" id="c-terms" required>
-          <span>He leÃ­do y acepto los <a href="#" data-legal="terms">TÃ©rminos y condiciones</a> y la <a href="#" data-legal="refund">PolÃ­tica de reembolso</a>.</span></label>
+          <span>He leído y acepto los <a href="#" data-legal="terms">Términos y condiciones</a> y la <a href="#" data-legal="refund">Política de reembolso</a>.</span></label>
         <label class="check"><input type="checkbox" id="c-priv" required>
-          <span>Autorizo de manera previa, expresa e informada el tratamiento de mis datos personales (nombre, correo y mensaje) para responder esta solicitud, segÃºn la <a href="#" data-legal="privacy">PolÃ­tica de privacidad</a>.</span></label>
+          <span>Autorizo de manera previa, expresa e informada el tratamiento de mis datos personales (nombre, correo y mensaje) para responder esta solicitud, según la <a href="#" data-legal="privacy">Política de privacidad</a>.</span></label>
         <button class="btn primary" type="submit">Enviar por correo</button>
         <p class="note" id="contact-result" role="status"></p>
       </form>
@@ -183,27 +183,27 @@
 </main>
 
 <footer class="foot">
-  <div><strong>PERIV</strong> Â· Herramienta gratuita de organizaciÃ³n personal. No constituye asesorÃ­a financiera.</div>
+  <div><strong>PERIV</strong> · Herramienta gratuita de organización personal. No constituye asesoría financiera.</div>
   <div class="foot-links">
-    <a href="#" data-legal="terms">TÃ©rminos</a>
+    <a href="#" data-legal="terms">Términos</a>
     <a href="#" data-legal="privacy">Privacidad</a>
     <a href="#" data-legal="cookies">Cookies</a>
     <a href="#" data-legal="refund">Reembolsos</a>
     <a href="#" id="foot-consents">Mis aceptaciones</a>
   </div>
-  <div class="tiny">Â© 2026 PERIV Â· GrÃ¡ficos propios en CSS: sin imÃ¡genes ni fuentes de terceros Â· Contacto: perivdor5@gmail.com Â· 321 700 3340</div>
+  <div class="tiny">© 2026 PERIV · Gráficos propios en CSS: sin imágenes ni fuentes de terceros · Contacto: perivdor5@gmail.com · 321 700 3340</div>
 </footer>
 
-<!-- ============ DIÃLOGO: PERFIL ============ -->
+<!-- ============ DIÁLOGO: PERFIL ============ -->
 <dialog id="dlg-onboard" aria-labelledby="ob-title">
   <form id="form-onboard" class="stack" autocomplete="off">
     <h3 id="ob-title">Crea tu perfil</h3>
-    <p class="note">Solo necesitamos un alias para saludarte. No pedimos correo, telÃ©fono ni documento.</p>
+    <p class="note">Solo necesitamos un alias para saludarte. No pedimos correo, teléfono ni documento.</p>
     <label>Alias o nombre de pila<input type="text" id="ob-alias" maxlength="30" required></label>
     <label class="check"><input type="checkbox" id="ob-terms" required>
-      <span>Declaro ser mayor de 18 aÃ±os y acepto los <a href="#" data-legal="terms">TÃ©rminos y condiciones</a> y la <a href="#" data-legal="refund">PolÃ­tica de reembolso</a>.</span></label>
+      <span>Declaro ser mayor de 18 años y acepto los <a href="#" data-legal="terms">Términos y condiciones</a> y la <a href="#" data-legal="refund">Política de reembolso</a>.</span></label>
     <label class="check"><input type="checkbox" id="ob-priv" required>
-      <span>Autorizo de manera previa, expresa e informada el tratamiento de mi alias conforme a la <a href="#" data-legal="privacy">PolÃ­tica de privacidad</a> y la <a href="#" data-legal="cookies">PolÃ­tica de cookies</a> (almacenamiento tÃ©cnico local).</span></label>
+      <span>Autorizo de manera previa, expresa e informada el tratamiento de mi alias conforme a la <a href="#" data-legal="privacy">Política de privacidad</a> y la <a href="#" data-legal="cookies">Política de cookies</a> (almacenamiento técnico local).</span></label>
     <div class="row-end">
       <button type="button" class="btn ghost" data-close>Cancelar</button>
       <button type="submit" class="btn primary">Aceptar y entrar</button>
@@ -211,20 +211,20 @@
   </form>
 </dialog>
 
-<!-- ============ DIÃLOGO: LEGAL ============ -->
+<!-- ============ DIÁLOGO: LEGAL ============ -->
 <dialog id="dlg-legal" class="wide" aria-labelledby="lg-title">
-  <div class="dlg-head"><h3 id="lg-title">Documento</h3><button class="x" data-close aria-label="Cerrar">âœ•</button></div>
+  <div class="dlg-head"><h3 id="lg-title">Documento</h3><button class="x" data-close aria-label="Cerrar">✕</button></div>
   <div class="legal-body" id="lg-body"></div>
 </dialog>
 
-<!-- ============ DIÃLOGO: REGISTRO ============ -->
+<!-- ============ DIÁLOGO: REGISTRO ============ -->
 <dialog id="dlg-consents" class="wide" aria-labelledby="cs-title">
-  <div class="dlg-head"><h3 id="cs-title">Mis aceptaciones</h3><button class="x" data-close aria-label="Cerrar">âœ•</button></div>
+  <div class="dlg-head"><h3 id="cs-title">Mis aceptaciones</h3><button class="x" data-close aria-label="Cerrar">✕</button></div>
   <div class="legal-body">
-    <p class="note">Registro de cuÃ¡ndo y cÃ³mo aceptaste cada formulario. Se guarda en tu dispositivo.</p>
+    <p class="note">Registro de cuándo y cómo aceptaste cada formulario. Se guarda en tu dispositivo.</p>
     <ul class="list" id="cs-list"></ul>
     <div class="row-end">
-      <button class="btn ghost small" id="cs-download">ðŸ“¥ Descargar JSON</button>
+      <button class="btn ghost small" id="cs-download">📥 Descargar JSON</button>
       <button class="btn danger small" id="cs-clear">Borrar registro</button>
     </div>
   </div>
@@ -232,7 +232,7 @@
 
 <!-- ============ BANNER DE COOKIES ============ -->
 <aside class="cookie" id="cookie" role="region" aria-label="Aviso de cookies" hidden>
-  <p>ðŸª PERIV usa <strong>solo almacenamiento local tÃ©cnico</strong> (necesario para guardar tus gastos). No usamos cookies de analÃ­tica, publicidad ni de terceros. <a href="#" data-legal="cookies">MÃ¡s informaciÃ³n</a>.</p>
+  <p>🍪 PERIV usa <strong>solo almacenamiento local técnico</strong> (necesario para guardar tus gastos). No usamos cookies de analítica, publicidad ni de terceros. <a href="#" data-legal="cookies">Más información</a>.</p>
   <button class="btn primary small" id="cookie-ok">Entendido</button>
 </aside>
 
@@ -240,98 +240,98 @@
 
 <!-- ============ TEXTOS LEGALES (plantillas) ============ -->
 <template id="tpl-terms">
-  <h4>TÃ©rminos y condiciones de uso</h4>
-  <p class="tiny">VersiÃ³n 1.0 Â· Ãšltima actualizaciÃ³n: 6 de noviembre de 2026</p>
-  <h5>1. QuiÃ©nes somos</h5>
-  <p>PERIV es una herramienta web gratuita de organizaciÃ³n personal (gastos y recordatorios), operada por <strong>[NOMBRE COMPLETO DEL RESPONSABLE]</strong>, con correo perivdor5@gmail.com y telÃ©fono 321 700 3340, en Colombia.</p>
-  <h5>2. AceptaciÃ³n y edad</h5>
-  <p>Al marcar la casilla de aceptaciÃ³n declaras que leÃ­ste estos tÃ©rminos, que eres mayor de 18 aÃ±os y que tienes capacidad legal para aceptarlos. Si no estÃ¡s de acuerdo, no uses el servicio.</p>
-  <h5>3. QuÃ© hace PERIV</h5>
-  <p>Permite registrar gastos, programar recordatorios y ver resÃºmenes. <strong>No es asesorÃ­a financiera, contable ni tributaria.</strong> Las decisiones que tomes con base en la informaciÃ³n son tu responsabilidad.</p>
+  <h4>Términos y condiciones de uso</h4>
+  <p class="tiny">Versión 1.0 · Última actualización: 6 de noviembre de 2026</p>
+  <h5>1. Quiénes somos</h5>
+  <p>PERIV es una herramienta web gratuita de organización personal (gastos y recordatorios), operada por <strong>[NOMBRE COMPLETO DEL RESPONSABLE]</strong>, con correo perivdor5@gmail.com y teléfono 321 700 3340, en Colombia.</p>
+  <h5>2. Aceptación y edad</h5>
+  <p>Al marcar la casilla de aceptación declaras que leíste estos términos, que eres mayor de 18 años y que tienes capacidad legal para aceptarlos. Si no estás de acuerdo, no uses el servicio.</p>
+  <h5>3. Qué hace PERIV</h5>
+  <p>Permite registrar gastos, programar recordatorios y ver resúmenes. <strong>No es asesoría financiera, contable ni tributaria.</strong> Las decisiones que tomes con base en la información son tu responsabilidad.</p>
   <h5>4. Tus datos en tu dispositivo</h5>
-  <p>La informaciÃ³n que ingresas se guarda Ãºnicamente en el almacenamiento de tu navegador. Si lo borras, cambias de dispositivo o navegador, podrÃ­as perderla. Eres responsable de hacer respaldos (por ejemplo, con la exportaciÃ³n CSV).</p>
+  <p>La información que ingresas se guarda únicamente en el almacenamiento de tu navegador. Si lo borras, cambias de dispositivo o navegador, podrías perderla. Eres responsable de hacer respaldos (por ejemplo, con la exportación CSV).</p>
   <h5>5. Recordatorios</h5>
-  <p>Los avisos se muestran mientras PERIV estÃ© abierto en una pestaÃ±a de tu navegador y dependen de los permisos y la configuraciÃ³n de tu dispositivo. No garantizamos que un aviso llegue a tiempo; no uses PERIV como Ãºnico medio para recordar obligaciones crÃ­ticas.</p>
+  <p>Los avisos se muestran mientras PERIV esté abierto en una pestaña de tu navegador y dependen de los permisos y la configuración de tu dispositivo. No garantizamos que un aviso llegue a tiempo; no uses PERIV como único medio para recordar obligaciones críticas.</p>
   <h5>6. Uso aceptable</h5>
-  <p>No puedes usar PERIV para actividades ilegales, intentar vulnerar su seguridad, ni copiar o redistribuir su cÃ³digo o diseÃ±o sin autorizaciÃ³n.</p>
+  <p>No puedes usar PERIV para actividades ilegales, intentar vulnerar su seguridad, ni copiar o redistribuir su código o diseño sin autorización.</p>
   <h5>7. Propiedad intelectual</h5>
-  <p>El nombre PERIV, el diseÃ±o, los grÃ¡ficos y el cÃ³digo son de su titular y estÃ¡n protegidos por la Ley 23 de 1982 y la DecisiÃ³n Andina 351 de 1993. El sitio no incluye fotografÃ­as ni recursos grÃ¡ficos de terceros.</p>
-  <h5>8. LimitaciÃ³n de responsabilidad</h5>
-  <p>El servicio se ofrece Â«tal cualÂ», sin garantÃ­a de disponibilidad continua ni de ausencia de errores. En la medida permitida por la ley colombiana, no respondemos por pÃ©rdidas indirectas derivadas del uso o de la imposibilidad de uso. Esto no limita los derechos irrenunciables que te otorga el Estatuto del Consumidor (Ley 1480 de 2011).</p>
+  <p>El nombre PERIV, el diseño, los gráficos y el código son de su titular y están protegidos por la Ley 23 de 1982 y la Decisión Andina 351 de 1993. El sitio no incluye fotografías ni recursos gráficos de terceros.</p>
+  <h5>8. Limitación de responsabilidad</h5>
+  <p>El servicio se ofrece «tal cual», sin garantía de disponibilidad continua ni de ausencia de errores. En la medida permitida por la ley colombiana, no respondemos por pérdidas indirectas derivadas del uso o de la imposibilidad de uso. Esto no limita los derechos irrenunciables que te otorga el Estatuto del Consumidor (Ley 1480 de 2011).</p>
   <h5>9. Cambios</h5>
-  <p>Podemos actualizar estos tÃ©rminos. Publicaremos la nueva versiÃ³n con su fecha y, si el cambio es sustancial, te pediremos aceptarla de nuevo.</p>
+  <p>Podemos actualizar estos términos. Publicaremos la nueva versión con su fecha y, si el cambio es sustancial, te pediremos aceptarla de nuevo.</p>
   <h5>10. Ley aplicable y contacto</h5>
-  <p>Estos tÃ©rminos se rigen por las leyes de la RepÃºblica de Colombia. Para reclamos: perivdor5@gmail.com. TambiÃ©n puedes acudir a la Superintendencia de Industria y Comercio (SIC).</p>
+  <p>Estos términos se rigen por las leyes de la República de Colombia. Para reclamos: perivdor5@gmail.com. También puedes acudir a la Superintendencia de Industria y Comercio (SIC).</p>
 </template>
 
 <template id="tpl-privacy">
-  <h4>PolÃ­tica de tratamiento de datos personales</h4>
-  <p class="tiny">VersiÃ³n 1.0 Â· Ãšltima actualizaciÃ³n: 6 de noviembre de 2026 Â· Marco: ConstituciÃ³n art. 15, Ley 1581 de 2012, Decreto 1377 de 2013 (compilado en el Decreto 1074 de 2015).</p>
+  <h4>Política de tratamiento de datos personales</h4>
+  <p class="tiny">Versión 1.0 · Última actualización: 6 de noviembre de 2026 · Marco: Constitución art. 15, Ley 1581 de 2012, Decreto 1377 de 2013 (compilado en el Decreto 1074 de 2015).</p>
   <h5>1. Responsable</h5>
-  <p><strong>[NOMBRE COMPLETO DEL RESPONSABLE]</strong> Â· Correo: perivdor5@gmail.com Â· Tel.: 321 700 3340 Â· Colombia.</p>
-  <h5>2. QuÃ© datos tratamos (solo los necesarios)</h5>
+  <p><strong>[NOMBRE COMPLETO DEL RESPONSABLE]</strong> · Correo: perivdor5@gmail.com · Tel.: 321 700 3340 · Colombia.</p>
+  <h5>2. Qué datos tratamos (solo los necesarios)</h5>
   <ul>
     <li><strong>Perfil:</strong> un alias. Se guarda solo en tu navegador; no lo recibimos.</li>
-    <li><strong>Gastos, presupuesto y recordatorios:</strong> los escribes tÃº y se guardan solo en tu navegador; no los recibimos ni los enviamos a ningÃºn servidor.</li>
-    <li><strong>Formulario de contacto:</strong> nombre, correo y mensaje. Solo los recibimos si tÃº decides enviar el correo.</li>
-    <li><strong>Registro de aceptaciÃ³n:</strong> fecha y hora, formulario, casillas marcadas, versiÃ³n de los documentos, idioma y navegador. Se guarda en tu dispositivo.</li>
+    <li><strong>Gastos, presupuesto y recordatorios:</strong> los escribes tú y se guardan solo en tu navegador; no los recibimos ni los enviamos a ningún servidor.</li>
+    <li><strong>Formulario de contacto:</strong> nombre, correo y mensaje. Solo los recibimos si tú decides enviar el correo.</li>
+    <li><strong>Registro de aceptación:</strong> fecha y hora, formulario, casillas marcadas, versión de los documentos, idioma y navegador. Se guarda en tu dispositivo.</li>
   </ul>
   <p>No pedimos datos sensibles, ni documentos de identidad, ni datos bancarios. <strong>No tratamos datos de menores de edad.</strong></p>
   <h5>3. Finalidades</h5>
-  <p>(a) Prestarte el servicio de organizaciÃ³n personal; (b) responder tus consultas o reclamos; (c) conservar prueba de tu autorizaciÃ³n. No vendemos datos, no hacemos perfilamiento publicitario ni enviamos publicidad.</p>
-  <h5>4. AutorizaciÃ³n</h5>
-  <p>Tratamos tus datos con tu autorizaciÃ³n previa, expresa e informada, que otorgas marcando de forma voluntaria una casilla separada en cada formulario. No viene premarcada. Puedes revocarla en cualquier momento escribiendo al correo indicado o borrando tus datos desde el panel.</p>
+  <p>(a) Prestarte el servicio de organización personal; (b) responder tus consultas o reclamos; (c) conservar prueba de tu autorización. No vendemos datos, no hacemos perfilamiento publicitario ni enviamos publicidad.</p>
+  <h5>4. Autorización</h5>
+  <p>Tratamos tus datos con tu autorización previa, expresa e informada, que otorgas marcando de forma voluntaria una casilla separada en cada formulario. No viene premarcada. Puedes revocarla en cualquier momento escribiendo al correo indicado o borrando tus datos desde el panel.</p>
   <h5>5. Tus derechos (art. 8, Ley 1581)</h5>
   <ul>
     <li>Conocer, actualizar y rectificar tus datos.</li>
-    <li>Solicitar prueba de la autorizaciÃ³n otorgada.</li>
+    <li>Solicitar prueba de la autorización otorgada.</li>
     <li>Ser informado del uso que se ha dado a tus datos.</li>
     <li>Presentar quejas ante la Superintendencia de Industria y Comercio (SIC).</li>
-    <li>Revocar la autorizaciÃ³n y/o solicitar la supresiÃ³n de tus datos.</li>
+    <li>Revocar la autorización y/o solicitar la supresión de tus datos.</li>
     <li>Acceder gratuitamente a tus datos.</li>
   </ul>
-  <h5>6. CÃ³mo ejercer tus derechos</h5>
-  <p>Escribe a perivdor5@gmail.com con tu nombre y tu solicitud. Consultas: respuesta en mÃ¡ximo 10 dÃ­as hÃ¡biles (prorrogables 5 mÃ¡s). Reclamos: mÃ¡ximo 15 dÃ­as hÃ¡biles (prorrogables 8 mÃ¡s).</p>
+  <h5>6. Cómo ejercer tus derechos</h5>
+  <p>Escribe a perivdor5@gmail.com con tu nombre y tu solicitud. Consultas: respuesta en máximo 10 días hábiles (prorrogables 5 más). Reclamos: máximo 15 días hábiles (prorrogables 8 más).</p>
   <h5>7. Terceros y transferencias</h5>
-  <p>PERIV no envÃ­a tus datos a terceros. Si usas el botÃ³n de correo o de WhatsApp, tu mensaje pasarÃ¡ por el proveedor que elijas (por ejemplo Google o Meta) bajo sus propias polÃ­ticas. No usamos fuentes, mapas ni analÃ­tica externos.</p>
-  <h5>8. Seguridad y conservaciÃ³n</h5>
+  <p>PERIV no envía tus datos a terceros. Si usas el botón de correo o de WhatsApp, tu mensaje pasará por el proveedor que elijas (por ejemplo Google o Meta) bajo sus propias políticas. No usamos fuentes, mapas ni analítica externos.</p>
+  <h5>8. Seguridad y conservación</h5>
   <p>Los datos de la app permanecen en tu dispositivo, bajo tu control. Los mensajes de contacto se conservan el tiempo necesario para atender tu solicitud y cumplir obligaciones legales.</p>
   <h5>9. Cambios</h5>
-  <p>Si cambiamos esta polÃ­tica de forma sustancial, te pediremos una nueva autorizaciÃ³n.</p>
+  <p>Si cambiamos esta política de forma sustancial, te pediremos una nueva autorización.</p>
 </template>
 
 <template id="tpl-cookies">
-  <h4>PolÃ­tica de cookies y almacenamiento local</h4>
-  <p class="tiny">VersiÃ³n 1.0 Â· Ãšltima actualizaciÃ³n: 6 de noviembre de 2026</p>
-  <h5>1. QuÃ© usamos</h5>
-  <p>PERIV <strong>no instala cookies</strong>. Usa Ãºnicamente el almacenamiento local del navegador (<em>localStorage</em>), estrictamente necesario para que la aplicaciÃ³n guarde tu perfil, gastos, recordatorios, presupuesto y registro de aceptaciones:</p>
+  <h4>Política de cookies y almacenamiento local</h4>
+  <p class="tiny">Versión 1.0 · Última actualización: 6 de noviembre de 2026</p>
+  <h5>1. Qué usamos</h5>
+  <p>PERIV <strong>no instala cookies</strong>. Usa únicamente el almacenamiento local del navegador (<em>localStorage</em>), estrictamente necesario para que la aplicación guarde tu perfil, gastos, recordatorios, presupuesto y registro de aceptaciones:</p>
   <ul>
     <li><code>periv_profile</code>, <code>periv_expenses</code>, <code>periv_reminders</code>, <code>periv_budget</code></li>
     <li><code>periv_consent_log</code> (registro de aceptaciones)</li>
     <li><code>periv_cookie_notice</code> (recuerda que viste este aviso)</li>
   </ul>
   <h5>2. Lo que NO usamos</h5>
-  <p>Cookies de analÃ­tica, publicidad, redes sociales o seguimiento; ni scripts, fuentes o imÃ¡genes de terceros.</p>
-  <h5>3. Â¿Se necesita consentimiento?</h5>
-  <p>Colombia no tiene una ley especÃ­fica de cookies; aplica la Ley 1581 de 2012 cuando se tratan datos personales. Como este almacenamiento es tÃ©cnico, local y no se envÃ­a a nosotros, no requiere un consentimiento adicional. Aun asÃ­ te informamos y guardamos que viste el aviso. Si en el futuro aÃ±adimos analÃ­tica o publicidad, pediremos tu consentimiento previo (opt-in) antes de activarlas.</p>
-  <h5>4. CÃ³mo borrarlo</h5>
-  <p>Usa Â«Borrar mis datosÂ» en el panel, o limpia los datos del sitio en la configuraciÃ³n de tu navegador.</p>
+  <p>Cookies de analítica, publicidad, redes sociales o seguimiento; ni scripts, fuentes o imágenes de terceros.</p>
+  <h5>3. ¿Se necesita consentimiento?</h5>
+  <p>Colombia no tiene una ley específica de cookies; aplica la Ley 1581 de 2012 cuando se tratan datos personales. Como este almacenamiento es técnico, local y no se envía a nosotros, no requiere un consentimiento adicional. Aun así te informamos y guardamos que viste el aviso. Si en el futuro añadimos analítica o publicidad, pediremos tu consentimiento previo (opt-in) antes de activarlas.</p>
+  <h5>4. Cómo borrarlo</h5>
+  <p>Usa «Borrar mis datos» en el panel, o limpia los datos del sitio en la configuración de tu navegador.</p>
 </template>
 
 <template id="tpl-refund">
-  <h4>PolÃ­tica de reembolso y retracto</h4>
-  <p class="tiny">VersiÃ³n 1.0 Â· Ãšltima actualizaciÃ³n: 6 de noviembre de 2026 Â· Marco: Ley 1480 de 2011 (Estatuto del Consumidor).</p>
+  <h4>Política de reembolso y retracto</h4>
+  <p class="tiny">Versión 1.0 · Última actualización: 6 de noviembre de 2026 · Marco: Ley 1480 de 2011 (Estatuto del Consumidor).</p>
   <h5>1. Servicio gratuito</h5>
   <p>Hoy PERIV es <strong>gratuito</strong>: no cobramos y, por tanto, no hay pagos que reembolsar.</p>
   <h5>2. Si en el futuro hay planes pagos</h5>
   <ul>
-    <li><strong>Derecho de retracto:</strong> en compras a distancia (internet) puedes retractarte dentro de los 5 dÃ­as hÃ¡biles siguientes a la contrataciÃ³n o entrega, sin dar explicaciones, conforme al art. 47 de la Ley 1480 de 2011.</li>
-    <li><strong>DevoluciÃ³n del dinero:</strong> se harÃ¡ dentro de los 30 dÃ­as calendario siguientes al ejercicio del retracto, por el mismo medio de pago.</li>
-    <li><strong>ReversiÃ³n del pago:</strong> si pagaste por un medio electrÃ³nico, puedes solicitar la reversiÃ³n en los casos del art. 51 (fraude, operaciÃ³n no solicitada, producto no recibido o no conforme), reclamando ante el emisor del medio de pago dentro de los 5 dÃ­as hÃ¡biles siguientes.</li>
-    <li><strong>GarantÃ­a legal:</strong> aplican las garantÃ­as de calidad e idoneidad del Estatuto del Consumidor.</li>
+    <li><strong>Derecho de retracto:</strong> en compras a distancia (internet) puedes retractarte dentro de los 5 días hábiles siguientes a la contratación o entrega, sin dar explicaciones, conforme al art. 47 de la Ley 1480 de 2011.</li>
+    <li><strong>Devolución del dinero:</strong> se hará dentro de los 30 días calendario siguientes al ejercicio del retracto, por el mismo medio de pago.</li>
+    <li><strong>Reversión del pago:</strong> si pagaste por un medio electrónico, puedes solicitar la reversión en los casos del art. 51 (fraude, operación no solicitada, producto no recibido o no conforme), reclamando ante el emisor del medio de pago dentro de los 5 días hábiles siguientes.</li>
+    <li><strong>Garantía legal:</strong> aplican las garantías de calidad e idoneidad del Estatuto del Consumidor.</li>
   </ul>
-  <h5>3. CÃ³mo solicitarlo</h5>
-  <p>Escribe a perivdor5@gmail.com o al 321 700 3340 indicando tu nombre y el pago. Esta polÃ­tica se actualizarÃ¡ antes de activar cualquier cobro y se te pedirÃ¡ aceptarla.</p>
+  <h5>3. Cómo solicitarlo</h5>
+  <p>Escribe a perivdor5@gmail.com o al 321 700 3340 indicando tu nombre y el pago. Esta política se actualizará antes de activar cualquier cobro y se te pedirá aceptarla.</p>
 </template>
 
 <script src="app.js"></script>
